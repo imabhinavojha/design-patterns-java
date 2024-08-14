@@ -7,8 +7,9 @@ public class DemoMultiThread {
                 "RESULT:" + "\n");
         Thread threadFoo = new Thread(new ThreadFoo());
         Thread threadBar = new Thread(new ThreadBar());
-        threadFoo.start();
         threadBar.start();
+        threadFoo.start();
+
     }
 
     static class ThreadFoo implements Runnable {

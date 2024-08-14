@@ -27,17 +27,7 @@ public final class Singleton {
         //
         // You can read more info DCL issues in Java here:
         // https://refactoring.guru/java-dcl-issue
-        //
-        // RU: Техника, которую мы здесь применяем называется «блокировка с
-        // двойной проверкой» (Double-Checked Locking). Она применяется, чтобы
-        // предотвратить создание нескольких объектов-одиночек, если метод будет
-        // вызван из нескольких потоков одновременно.
-        //
-        // Хотя переменная `result` вполне оправданно кажется здесь лишней, она
-        // помогает избежать подводных камней реализации DCL в Java.
-        //
-        // Больше об этой проблеме можно почитать здесь:
-        // https://refactoring.guru/ru/java-dcl-issue
+
         Singleton result = instance;
         if (result != null) {
             return result;
